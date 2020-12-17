@@ -1,0 +1,42 @@
+div{
+	width: 50px;
+	height: 50px;
+	background-color: green;
+	border: 2px solid black;
+	border-radius: 50%;
+}
+.grid {
+	display: grid;
+	grid-row-gap: 30px;
+	/*Второе задание*/
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	/*Третье задание*/
+	grid-template-rows: 1fr;
+	grid-template-columns: repeat(10, 1fr 1fr);
+	/*Четвертое задание*/
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: repeat(5, 1fr 1fr);
+	/*Пятое задание*/
+}
+@media screen and (max-width: 499px){
+	.grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: repeat(2, 1fr 1fr );
+	}
+	div {
+		background-color: red;
+	}
+}
+@media screen and (min-width: 1001px){
+	.grid{
+		display: grid;
+		grid-template-columns: repeat(20, 1fr);
+		grid-template-rows: 1fr;
+	}
+	div {
+		background-color: yellow;
+	}
+}
+/*Шестое задание*/
